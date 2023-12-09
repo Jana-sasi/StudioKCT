@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body style="background-image: url('bg.jpg'); background-size: cover;">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+        <div class="container-fluid">
+          <div class="input-group" style="width: 65vw;">
+            <a class="navbar-brand" href="#"><img src="LOGOS.png" width="75vh" alt=""></a>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBasic" aria-controls="navbarBasic" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarBasic">
+            <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#abtus">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#ourteam">Our Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#ourteam">Contact us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="login.html">Login</a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+      </nav>
+      
+      <div class="input-group" style="width: 30vw; padding: 2vw; border-radius: 2vw; margin: 0vw 0 0 35vw;">
+        <form onsubmit="validate()">
+            <div class="input-group"style="opacity: 100%;">
+                <span class="input-group-text" style="border-radius: 10vw 0 0 10vw;" id="input-group-left-example">First Name:</span>
+                <input type="text" class="form-control" id="fname" required aria-label="Username" aria-describedby="input-group-left" style="border-radius:0 10vw 10vw 0vw;">
+              </div>
+              <br>
+              <div class="input-group"style="opacity: 100%;">
+                <span class="input-group-text" style="border-radius: 10vw 0 0 10vw;" id="input-group-left-example">Last Name:</span>
+                <input type="text" class="form-control" id="lname" required  aria-label="Username" aria-describedby="input-group-left" style="border-radius:0 10vw 10vw 0vw;">
+              </div>
+              <br>
+              <div class="input-group"style="opacity: 100%;">
+                <span class="input-group-text" style="border-radius: 10vw 0 0 10vw;" id="input-group-left-example">Username:</span>
+                <input type="text" class="form-control" id="uname" required  aria-label="Username" aria-describedby="input-group-left" style="border-radius:0 10vw 10vw 0vw;">
+              </div>
+              <br>
+            <div class="input-group"style="opacity: 100%;">
+                <span class="input-group-text" style="border-radius: 10vw 0 0 10vw;" id="input-group-left-example">Email:</span>
+                <input type="email" class="form-control" id="email" required  aria-label="Username" aria-describedby="input-group-left" style="border-radius:0 10vw 10vw 0vw;">
+              </div>
+              <br>
+              <div class="input-group"style="opacity: 100%;">
+                <span class="input-group-text"style="border-radius: 10vw 0 0 10vw;" id="input-group-left-example">Password:</span>
+                <input type="password" id="pass" required>
+              </div><br>
+              <div class="input-group"style="opacity: 100%;">
+                <span class="input-group-text"style="border-radius: 10vw 0 0 10vw;" id="input-group-left-example">Confirm Password:</span>
+                <input type="password" id="copass" required >
+              </div><br>
+              <div class="input-group"style="opacity: 100%; width: 100%; color: black; margin-left: 15%">
+                <fieldset class="row mb-3" style="width: 100%;">
+                    <legend class="col-form-label col-sm-2 pt-0" style="margin-right: 1%;">Member Type: </legend>
+                    <div class="col-sm-10">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="memtype" value="option1">
+                        <label class="form-check-label" for="gridRadios2">
+                          Member
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="memtype" value="option2">
+                        <label class="form-check-label" for="gridRadios3">
+                          User
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+              </div><br>
+              <button type="submit" value="submit" class="btn btn-success" >Submit</button>
+        </form>
+      </div>
+      
+      <script>
+       var pass1 = document.getElementById('pass').value;
+        var cpass1 = document.getElementById('copass').value;
+
+        function validate() {
+            if(pass1 != cpass1){
+                alert("Password valid");
+            }
+            else{
+                alert("Logged unsuccessful")
+            }
+        }
+      </script>
+</body>
+</html>
